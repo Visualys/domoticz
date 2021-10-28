@@ -1,0 +1,8 @@
+Light on & off :
+http://192.168.1.33:8080/json.htm?type=command&param=switchlight&idx=22&switchcmd=On
+http://192.168.1.33:8080/json.htm?type=command&param=switchlight&idx=22&switchcmd=Off
+
+Update a user variable :
+http://192.168.1.33:8080/json.htm?type=command&param=updateuservariable&vname=myvar&vtype=2&vvalue=myvalue
+vtype=2 means string variable
+
