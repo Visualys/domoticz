@@ -1,19 +1,20 @@
-Add Script to Domoticz :
-************************
+Add this Script to Domoticz :
+_______________________________________________________________________________________________
 -- script : esp_time
 return {
-	on = {customEvents = {'esptime'}},
-	execute = function(dz, data)
+  on = {customEvents = {'esptime'}},
+  execute = function(dz, data)
     local Time = require('Time')
     local now = Time()
-		dz.openURL('http://'..data.json.ip..'/tools?cmd=datetime,'..now.rawDate..','..now.rawTime)
+    dz.openURL('http://'..data.json.ip..'/tools?cmd=datetime,'..now.rawDate..','..now.rawTime)
     end
 }
-*************************
+_______________________________________________________________________________________________
 
-In espeasy, add the folowwing rule : (change domoticz.local by your Domoticz hostname or IP)
-************************************
+
+In espeasy, add the following rule : (change domoticz.local by your Domoticz hostname or IP)
+__________________________________________________________________________________________________________
 on wiFi#connected do
   sendtohttp,domoticz.local,8080,json.htm?type=command&param=customevent&event=esptime&data={'ip':'%ip%'}
   endon
-************************************
+__________________________________________________________________________________________________________
