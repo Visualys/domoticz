@@ -6,3 +6,5 @@ Update a user variable :
 http://192.168.1.33:8080/json.htm?type=command&param=updateuservariable&vname=myvar&vtype=2&vvalue=myvalue
 vtype=2 means string variable
 
+Update a devide (without event execution) :
+http://192.168.1.33:8080/json.htm?type=command&param=udevice&idx=19&nvalue=1
