@@ -1,0 +1,12 @@
+Autostart in GUI mode : 
+
+Edit file :
+/etc/xdg/lxsession/LXDE-pi/autostart
+
+Add line at the end :
+@sudo systemctl restart domoticz | sleep 20
+
+
+
+to add a console add the line :
+@lxterminal
